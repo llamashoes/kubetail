@@ -89,7 +89,7 @@ fi
 pod_logs_commands=()
 for pod in ${matching_pods[@]};
 do
-	pod_logs_commands+=("kubectl --context=${context} logs ${pod} ${container} -f --since=${since}")
+	pod_logs_commands+=("kubectl --context=${context} logs ${pod} ${container} -f")
 done
 
 # Join all log commands into one string seperated by " & "
